@@ -24,7 +24,7 @@
   </engines>
 
   <js-module src="www/GoogleSignIn.js" name="GoogleSignIn">
-    <clobbers target="window.plugins.googlesignin" />
+    <clobbers target="window.plugins.Googlesignin" />
   </js-module>
 
   <!-- android -->

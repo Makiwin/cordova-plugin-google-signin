@@ -30,8 +30,8 @@ GoogleSignIn.install = function () {
     window.plugins = {};
   }
 
-  window.plugins.GoogleSignIn = new GoogleSignIn();
-  return window.plugins.GoogleSignIn;
+  window.plugins.googlesignin = new GoogleSignIn();
+  return window.plugins.googlesignin;
 };
 
 cordova.addConstructor(GoogleSignIn.install);
