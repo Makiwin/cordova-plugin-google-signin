@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-googleplus"
-        version="8.5.2">
+        id="cordova-plugin-google-signin"
+        version="9.0.0">
 
   <name>Google SignIn</name>
 
@@ -14,17 +14,17 @@
 
   <keywords>Google, Google SignIn, GoogleSignIn, Google Login, Login, OAuth, Identity, Authentication</keywords>
 
-  <repo>https://github.com/EddyVerbruggen/cordova-plugin-googleplus.git</repo>
+  <repo>https://github.com/Makiwin/cordova-plugin-google-signin.git</repo>
 
-  <issue>https://github.com/EddyVerbruggen/cordova-plugin-googleplus/issues</issue>
+  <issue>https://github.com/Makiwin/cordova-plugin-google-signin/issues</issue>
 
   <engines>
     <engine name="cordova" version=">=7.1.0"/>
     <engine name="cordova-android" version=">=6.3.0"/>
   </engines>
 
-  <js-module src="www/GooglePlus.js" name="GooglePlus">
-    <clobbers target="window.plugins.googleplus" />
+  <js-module src="www/GooglePlus.js" name="GoogleSignIn">
+    <clobbers target="window.plugins.googlesignin" />
   </js-module>
 
   <!-- android -->
@@ -35,8 +35,8 @@
     <framework src="com.google.android.gms:play-services-identity:$PLAY_SERVICES_VERSION" />
 
     <config-file target="res/xml/config.xml" parent="/*">
-      <feature name="GooglePlus">
-        <param name="android-package" value="nl.xservices.plugins.GooglePlus" />
+      <feature name="GoogleSignIn">
+        <param name="android-package" value="com.makiwin.plugins.GoogleSignIn" />
         <param name="onload" value="true" />
       </feature>
       <access origin="https://accounts.google.com/*" />
@@ -47,7 +47,7 @@
       <uses-permission android:name="android.permission.USE_CREDENTIALS" />
     </config-file>
 
-    <source-file src="src/android/GooglePlus.java" target-dir="src/nl/xservices/plugins"/>
+    <source-file src="src/android/GoogleSignIn.java" target-dir="src/com/makiwin/plugins"/>
   </platform>
 
   <!-- ios -->
@@ -61,8 +61,8 @@
       <access origin="https://accounts.google.com/*" />
     </config-file>
 
-    <header-file src="src/ios/GooglePlus.h"/>
-    <source-file src="src/ios/GooglePlus.m"/>
+    <header-file src="src/ios/GoogleSignIn.h"/>
+    <source-file src="src/ios/GoogleSignIn.m"/>
 
     <preference name="REVERSED_CLIENT_ID" />
 
@@ -107,8 +107,8 @@
         <source url="https://cdn.cocoapods.org/"/>
       </config>
       <pods use-frameworks="true">
-        <pod name="GoogleSignIn" spec="~> 5.0.2"/>
-        <pod name="GoogleUtilities" spec="~> 7.2.2"/>
+        <pod name="GoogleSignIn" spec="~> 7.0.0"/>
+        <pod name="GoogleUtilities" spec="~> 8.0.2"/>
       </pods>
     </podspec>
 
@@ -116,7 +116,7 @@
   </platform>
 
   <!-- browser -->
-  <platform name="browser">
+  <!-- <platform name="browser">
     <js-module src="src/browser/GooglePlusProxy.js" name="GooglePlusProxy">
       <clobbers target="GooglePlus" />
     </js-module>
@@ -129,8 +129,8 @@
 
     <preference name="WEB_APPLICATION_CLIENT_ID" />
 
-    <!-- after_prepare hook to populate APP_ID -->
+    after_prepare hook to populate APP_ID 
     <hook type="after_prepare" src="hooks/browser/after_prepare.js" />
-  </platform>
+  </platform> -->
 
 </plugin>

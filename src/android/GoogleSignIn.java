@@ -1,4 +1,4 @@
-package nl.xservices.plugins;
+package com.makiwin.plugins;
 
 import android.accounts.Account;
 import android.accounts.AccountManager;
@@ -42,7 +42,7 @@ import android.content.pm.Signature;
  * Originally written by Eddy Verbruggen (http://github.com/EddyVerbruggen/cordova-plugin-googleplus)
  * Forked/Duplicated and Modified by PointSource, LLC, 2016.
  */
-public class GooglePlus extends CordovaPlugin implements GoogleApiClient.OnConnectionFailedListener {
+public class GoogleSignIn extends CordovaPlugin implements GoogleApiClient.OnConnectionFailedListener {
 
     public static final String ACTION_IS_AVAILABLE = "isAvailable";
     public static final String ACTION_LOGIN = "login";
