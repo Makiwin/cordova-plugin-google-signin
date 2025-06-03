@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
         xmlns:android="http://schemas.android.com/apk/res/android"
-        id="cordova-plugin-google-signin"
+        id="@makiwin/cordova-plugin-google-signin"
         version="9.0.0">
 
   <name>Google SignIn</name>
@@ -23,7 +23,7 @@
     <engine name="cordova-android" version=">=6.3.0"/>
   </engines>
 
-  <js-module src="www/GooglePlus.js" name="GoogleSignIn">
+  <js-module src="www/GoogleSignIn.js" name="GoogleSignIn">
     <clobbers target="window.plugins.googlesignin" />
   </js-module>
 
